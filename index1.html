@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>your name - protfolio</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: violet;
+            }
+            header{
+                background-color: #fff;
+                color: #333;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative;
+            }
+            .header-content h1{
+                font-size: 2.5rem;
+            }
+            .profile-pictrue{
+                width: 100px;
+                height: 100px;
+                border-radius: 75%;
+                object-fit: cover;
+                position: absolute;
+                top: 75px;
+                left: 75px;
+            }
+            nav{
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+            }
+            nav ul{
+                list-style-type:none;
+                padding: 0;
+            }
+            nav ul li{
+                display: inline;
+                margin: 0 20px;
+            }
+            nav ul li a{
+                text-decoration: none;
+                color: #fff;
+            }
+            .section-contect{
+                background-color: pink;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0 , 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-contect">
+                <h1>naanmudhalvan</h1>
+                <p>passionate</p>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a herf="#about"></a></li>
+                <li><a herf="#education"></a></li>
+                <li><a herf="#skills"></a></li>
+                <li><a herf="#projects"></a></li>
+                <li><a herf="#resume"></a></li>
+            </ul>
+        </nav>
+        <section id="about">
+            <div class="section-content">
+                <h2>About me</h2>
+                <p>hello everyone this is jenifer and i am computer science student. </p>
+            </div>
+        </section>
+        <section id="education">
+            <div class="section-content">
+                <h2>Bsc</h2>
+                <p>Goverment arts and science college for women</p>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="section-content">
+                <h2>skills</h2>
+                <ul>
+                    <li>python</li>
+                    <li>artificial intelligence</li>
+                    <li>machine learning</li
+                    <li>html</li>
+                </ul>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="section-content">
+                <h2>projects</h2>
+                <ul>
+                    <li><a herf="#">project 1</a></li>
+                    <li><a herf="#">project 2</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <center>
+                <div class="section-content">
+                    <h2>Resume</h2>
+                </div>
+            </center>
+        </section>
+        <footer>
+            <p>&copy; 2023 jenifer</p>
+        </footer>
+        <script>
+            document.querySelectorAll('a[herf^="#"]').forEach(anchor => {
+                anchor.addEventListener('click',function(e)){
+                    e.preventDefault();
+                    const targetId=this.getAttribute('herf').substring(1);
+                    const targetElement=document.getElementById(targetid);
+                    if(targetElement){
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior:"smooth"
+                        });
+                    }
+                });
+            });
+      </script>        
+    </body>
+</html>
